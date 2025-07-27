@@ -8,7 +8,6 @@ main
 migrate
 
 # Go modules & workspace
-go.sum
 go.work
 
 # Vendor directory (if not vendoring dependencies)

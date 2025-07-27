@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "yourdockerhubuser/golang-gin-app"
+        IMAGE_NAME = "hungit2002/golang-gin-app"
         INFRA_REPO = "/tmp/infra"
         GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
     }
