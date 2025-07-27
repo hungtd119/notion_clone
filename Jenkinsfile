@@ -18,8 +18,14 @@ pipeline {
             steps {
                 script {
                     def tag = "v${env.BUILD_NUMBER}"
-                    sh "docker build -t $IMAGE_NAME:$tag ."
-                    sh "docker push $IMAGE_NAME:$tag"
+                     withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                                    sh '''
+                                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                                        docker build -t $IMAGE_NAME:'${tag}' .
+                                        docker push $IMAGE_NAME:'${tag}'
+                                        docker logout
+                                    '''
+                                }
                     env.NEW_TAG = tag
                 }
             }
