@@ -1,0 +1,58 @@
+# ========================
+# Go build & tooling
+# ========================
+*.exe
+*.test
+*.out
+main
+migrate
+
+# Go modules & workspace
+go.sum
+go.work
+
+# Vendor directory (if not vendoring dependencies)
+vendor/
+
+# ========================
+# Logs & outputs
+# ========================
+*.log
+
+# ========================
+# Editor/IDE config
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Env files
+# ========================
+.env
+.env.*
+
+# ========================
+# Docker
+# ========================
+*.pid
+docker-compose.override.yml
+
+# ========================
+# Migration
+# ========================
+/migrations/*.tmp
+/migrations/*.bak
+
+# ========================
+# Build output folders
+# ========================
+/build
+/dist
