@@ -42,7 +42,7 @@ pipeline {
 
                         git checkout main
 
-                        sed -i 's/tag: .*/tag: ${env.NEW_TAG}/' charts/my-app/values.yaml
+                        sed -i 's/tag: .*/tag: ${env.NEW_TAG}/' charts/gin-app/values.yaml
 
                         git config user.email "tranduyhungdz119@gmail.com"
                         git config user.name "CI Bot"
