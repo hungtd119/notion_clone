@@ -1,5 +1,21 @@
-DB_USER=
-DB_PASS=
-DB_NAME=
-DB_HOST=
-DB_PORT=
+# Server Configuration
+PORT=8080
+ENV=development
+LOG_LEVEL=info
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=password
+DB_NAME=notion
+
+# JWT Configuration (nếu cần)
+JWT_SECRET=your-secret-key
+JWT_EXPIRY=24h
+
+# Redis Configuration (nếu cần)
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+REDIS_DB=0

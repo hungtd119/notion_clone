@@ -1,10 +1,9 @@
-DB_URL=db
-
+DB_URL=
 migrate-up:
-	migrate -path migrations -database "$(DB_URL)" up
+	migrate -path src/migrations -database "$(DB_URL)" up
 
 migrate-down:
-	migrate -path migrations -database "$(DB_URL)" down
+	migrate -path src/migrations -database "$(DB_URL)" down
 
 create:
-	migrate create -ext sql -dir migrations -seq $(name)
+	migrate create -ext sql -dir src/migrations -seq $(name)
